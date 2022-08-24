@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Json" nsURI="http://Json/1.0" nsPrefix="Json">
+  <eClassifiers xsi:type="ecore:EClass" name="JsonModel">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cluster" upperBound="-1"
+        eType="#//Cluster" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="links" upperBound="-1"
+        eType="#//Link" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Cluster">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="node5" eType="#//Node5"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nodeLink" upperBound="-1"
+        eType="#//Link" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="placement" eType="#//Position"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="node1" eType="#//Node1"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="node2" eType="#//Node2"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="node3" eType="#//Node3"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="node4" eType="#//Node4"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Node5" eSuperTypes="#//Node">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="namespace" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Type">
+    <eLiterals name="NODE01"/>
+    <eLiterals name="NODE02" value="1"/>
+    <eLiterals name="NODE03" value="2"/>
+    <eLiterals name="NODE04" value="3"/>
+    <eLiterals name="NODE05" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Position">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="w" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="h" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Link">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceNode" lowerBound="1"
+        eType="#//Node"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetNode" lowerBound="1"
+        eType="#//Node"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Node1" eSuperTypes="#//Node"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Node2" eSuperTypes="#//Node"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Node3" eSuperTypes="#//Node"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Node4" eSuperTypes="#//Node"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Node">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="placement" eType="#//Position"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceLink" upperBound="-1"
+        eType="#//Link"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetLink" upperBound="-1"
+        eType="#//Link"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//Type"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+  </eClassifiers>
+</ecore:EPackage>

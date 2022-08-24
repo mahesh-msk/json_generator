@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="org.ancit.json.ui.editor.JsonGraphicalEditor"
+            contributorClass="JsonGraphicalEditorActionBarContributor"
+            default="false"
+            extensions="json"
+            id="org.ancit.json.ui.editor1"
+            name="Json Editor">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="org.ancit.json.ui.category1"
+            name="Json config">
+      </category>
+      <wizard
+            category="org.ancit.json.ui.category1"
+            class="org.ancit.json.ui.wizard.JsonWizard"
+            id="org.ancit.json.ui.wizard.JsonWizard"
+            name="json Model">
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="org.ancit.json.preferences.PreferencePage1"
+            id="org.ancit.json.preferences.PreferencePage1"
+            name="Json Preference">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="org.ancit.json.preferences.PreferenceInitializer1">
+      </initializer>
+   </extension>
+
+</plugin>

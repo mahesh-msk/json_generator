@@ -1,0 +1,108 @@
+<%@ jet package="com.ancit.json.ui.jet" class="JsonGenerator" imports="Json.* java.text.DateFormat java.text.ParseException java.text.SimpleDateFormat java.util.Date"%>
+<%Object argument2 = argument;
+	  if (argument2 instanceof Cluster) {
+		Cluster cluster = (Cluster) argument2;
+			%>
+		{  
+   "Cluster": 
+	[	
+		{
+		  "Name": <%=cluster.getName()%>,
+	}
+	]	
+		}<%
+		}
+	  else if (argument2 instanceof Node1) {
+		Node1 node1 = (Node1) argument2;
+		%>
+		{  
+   "Node1": 
+	[	
+		{
+		  "Name": <%=node1.getName()%>,
+		  "Type": <%=node1.getType().getLiteral()%>, 
+		  <%
+		  	DateFormat df = new SimpleDateFormat("mm/dd/yyyy");
+		  String date=df.format(node1.getDate());
+		  %>
+		"Date":=<%=date%>
+	}
+	]	
+		}<%
+	}
+	 else if (argument2 instanceof Node2) {
+		Node2 node2 = (Node2) argument2;
+			%>
+		{  
+   "Node2": 
+	[	
+		{
+		  "Name": <%=node2.getName()%>,
+		  "Type": <%=node2.getType().getLiteral()%>, 
+		  <%
+		  	DateFormat df = new SimpleDateFormat("mm/dd/yyyy");
+		  String date=df.format(node2.getDate());
+		  %>
+		"Date":=<%=date%>
+	}
+	]	
+		}<%
+		
+	}
+	 else if (argument2 instanceof Node3) {
+		Node3 node3 = (Node3) argument2;
+			%>
+		{  
+   "Node3": 
+	[	
+		{
+		  "Name": <%=node3.getName()%>,
+		  "Type": <%=node3.getType().getLiteral()%>, 
+		  <%
+		  	DateFormat df = new SimpleDateFormat("mm/dd/yyyy");
+		  String date=df.format(node3.getDate());
+		  %>
+		"Date":=<%=date%>
+	}
+	]	
+		}<%
+		
+	}
+	 else if (argument2 instanceof Node4) {
+		Node4 node4 = (Node4) argument2;
+			%>
+		{  
+   "Node4": 
+	[	
+		{
+		  "Name": <%=node4.getName()%>,
+		  "Type": <%=node4.getType().getLiteral()%>, 
+		  <%
+		  	DateFormat df = new SimpleDateFormat("mm/dd/yyyy");
+		  String date=df.format(node4.getDate());
+		  %>
+		"Date":=<%=date%>
+	}
+	]	
+		}<%
+		
+	}
+	 else if (argument2 instanceof Node5) {
+		Node5 node5 = (Node5) argument2;
+			%>
+		{  
+   "Node5": 
+	[	
+		{
+		  "Name": <%=node5.getName()%>,
+		  "Type": <%=node5.getType().getLiteral()%>, 
+		  <%
+		  	DateFormat df = new SimpleDateFormat("mm/dd/yyyy");
+		  String date=df.format(node5.getDate());
+		  %>
+		"Date":=<%=date%>
+	}
+	]	
+		}<%
+		
+	}%>

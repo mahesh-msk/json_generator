@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.ancit.json.model/src" modelPluginID="org.ancit.json.model"
+    modelName="Json" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>Json.ecore</foreignModel>
+  <genPackages prefix="Json" disposableProviderFactory="true" ecorePackage="Json.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Json.ecore#//Format">
+      <genEnumLiterals ecoreEnumLiteral="Json.ecore#//Format/UTF8"/>
+      <genEnumLiterals ecoreEnumLiteral="Json.ecore#//Format/UTF16"/>
+    </genEnums>
+    <genClasses ecoreClass="Json.ecore#//JsonModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Json.ecore#//JsonModel/cluster"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Json.ecore#//JsonModel/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Json.ecore#//JsonModel/links"/>
+    </genClasses>
+    <genClasses ecoreClass="Json.ecore#//Cluster">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Json.ecore#//Cluster/node5"/>
+      <genFeatures children="true" createChild="true" propertyCategory="" propertyDescription=""
+          propertySortChoices="true" ecoreFeature="ecore:EReference Json.ecore#//Cluster/nodeLink"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Json.ecore#//Cluster/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Json.ecore#//Cluster/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Json.ecore#//Cluster/placement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Json.ecore#//Cluster/node1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Json.ecore#//Cluster/node2"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Json.ecore#//Cluster/node3"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Json.ecore#//Cluster/node4"/>
+    </genClasses>
+    <genClasses ecoreClass="Json.ecore#//Node5">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Json.ecore#//Node5/namespace"/>
+    </genClasses>
+    <genClasses ecoreClass="Json.ecore#//Position">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Json.ecore#//Position/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Json.ecore#//Position/y"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Json.ecore#//Position/w"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Json.ecore#//Position/h"/>
+    </genClasses>
+    <genClasses ecoreClass="Json.ecore#//Link">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Json.ecore#//Link/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Json.ecore#//Link/sourceNode"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Json.ecore#//Link/targetNode"/>
+    </genClasses>
+    <genClasses ecoreClass="Json.ecore#//Node1"/>
+    <genClasses ecoreClass="Json.ecore#//Node2"/>
+    <genClasses ecoreClass="Json.ecore#//Node3"/>
+    <genClasses ecoreClass="Json.ecore#//Node4"/>
+    <genClasses ecoreClass="Json.ecore#//Node">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Json.ecore#//Node/placement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Json.ecore#//Node/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Json.ecore#//Node/sourceLink"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Json.ecore#//Node/targetLink"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

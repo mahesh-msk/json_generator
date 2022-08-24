@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated Json -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="Json.presentation.JsonModelWizardID"
+            name="%_UI_JsonModelWizard_label"
+            class="Json.presentation.JsonModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/JsonModelFile.gif">
+         <description>%_UI_JsonModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated Json -->
+      <editor
+            id="Json.presentation.JsonEditorID"
+            name="%_UI_JsonEditor_label"
+            icon="icons/full/obj16/JsonModelFile.gif"
+            extensions="json"
+            class="Json.presentation.JsonEditor"
+            contributorClass="Json.presentation.JsonActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
